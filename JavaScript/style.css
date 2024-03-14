@@ -42,29 +42,86 @@ h1 {
 }
 
 h2 {
-    text-align: left;
     color: white;
     font-size: 15;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
+}
+h3 {
+    color: black;
+    font-size: 15;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.outlined-button {
-    cursor: pointer;
-    background-color: transparent;
+p {
     color: white;
-    border: 2px solid white;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 10;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p1 {
+    color: black;
+    font-size: 10;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.outlined-button:hover {
-    border: 2px solid grey;
+.input-container {
+    text-align: center;
 }
 
-.button-group {
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+.scroll-box {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin to bottom */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.button-container {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 300px; /* Adjust button width as needed */
+    height: 100px; /* Adjust button height as needed */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px; 
+}
+
+.button-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 1;
+}
+
+.button-title {
+    margin: 0;
+}
+
+.button-description {
+    margin: 0;
+    font-size: 14px;
+}
+
+.money-bar {
+    width: 0; /* Initial width of the money bar */
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
 }

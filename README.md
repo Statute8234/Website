@@ -7,7 +7,7 @@ The website features a basic structure with clear navigation and dynamic content
 - [About](#about)
 - [Features](#features)
 - [Imports](#Imports)
-- [Rating: 6/10](#Rating)
+- [Rating: 7/10](#Rating)
 
 # About
 

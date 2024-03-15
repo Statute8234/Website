@@ -1,0 +1,30 @@
+settings:
+  project_name: "Website"
+  version: "0.2"
+  author: "Statute8234"
+  description: "The website features a basic structure with clear navigation and dynamic content sections for recommending charity programs and groups, allowing users to add items using an input box and button."
+  repository: "https://github.com/Statute8234/Website.git"
+
+workflows:
+  build:
+    on:
+      push:
+        branches: [main, master]
+      pull_request:
+        branches: [main, master]
+    jobs:
+      build:
+        runs-on: windows-latest
+        steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v2
+          - name: Build Project
+            run: |
+              npm install
+              npm run build
+          - name: Deploy to Production
+            uses: some-action/deploy@v1
+            with:
+              token: ${{ secrets.PRODUCTION_TOKEN }}
+              environment: production
+              directory: dist
